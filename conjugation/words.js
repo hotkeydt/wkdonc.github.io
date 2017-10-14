@@ -5,6 +5,7 @@ var words = {
   "走る": {
 
     "group": "godan",
+    "meaning": "to run​",
 
     "conjugations": {
 
@@ -42,6 +43,7 @@ var words = {
   "死ぬ": {
 
     "group": "godan",
+    "meaning": "to die",
 
     "conjugations": {
 
@@ -79,6 +81,7 @@ var words = {
   "上げる": {
 
     "group": "ichidan",
+    "meaning": "to raise; to elevate",
 
     "conjugations": {
 
@@ -116,6 +119,7 @@ var words = {
   "上る": {
 
     "group": "godan",
+    "meaning": "to ascend; to go up; to climb​",
 
     "conjugations": {
 
@@ -153,6 +157,7 @@ var words = {
   "聞く": {
 
     "group": "godan",
+    "meaning": "to hear",
 
     "conjugations": {
 
@@ -190,6 +195,7 @@ var words = {
   "書く": {
 
     "group": "godan",
+    "meaning": "to write; to compose; to pen​",    
 
     "conjugations": {
 
@@ -227,6 +233,7 @@ var words = {
   "消す": {
 
     "group": "godan",
+    "meaning": "to erase; to delete; to turn off power​",
 
     "conjugations": {
 
@@ -264,6 +271,7 @@ var words = {
   "着る": {
 
     "group": "ichidan",
+    "meaning": "to wear; to put on​",
 
     "conjugations": {
 
@@ -301,6 +309,7 @@ var words = {
   "育てる": {
 
     "group": "ichidan",
+    "meaning": "to raise; to rear; to bring up​; to train; to teach; to educate​",
 
     "conjugations": {
 
@@ -338,6 +347,7 @@ var words = {
   "遊ぶ": {
 
     "group": "godan",
+		"meaning": "to play; to enjoy oneself; to be idle; to do nothing",
 
     "conjugations": {
 
@@ -375,6 +385,7 @@ var words = {
   "褒める": {
 
     "group": "ichidan",
+    "meaning": "to praise; to admire; to speak well of someone​",
 
     "conjugations": {
 
@@ -412,6 +423,7 @@ var words = {
   "学ぶ": {
 
     "group": "godan",
+    "meaning": "to study (in depth); to learn; to take lessons in​",    
 
     "conjugations": {
 
@@ -449,6 +461,7 @@ var words = {
   "喜ぶ": {
 
     "group": "godan",
+    "meaning": "to be delighted; to be glad; to be pleased​; to congratulate​",        
 
     "conjugations": {
 
@@ -486,6 +499,7 @@ var words = {
   "泳ぐ": {
 
     "group": "godan",
+    "meaning": "to swim​",        
 
     "conjugations": {
 
@@ -523,6 +537,7 @@ var words = {
   "注ぐ": {
 
     "group": "godan",
+    "meaning": "to pour (into)​",        
 
     "conjugations": {
 
@@ -560,6 +575,7 @@ var words = {
   "急ぐ": {
 
     "group": "godan",
+    "meaning": "to hurry; to rush; to hasten; to make something happen sooner​",        
 
     "conjugations": {
 
@@ -597,6 +613,7 @@ var words = {
   "立つ": {
 
     "group": "godan",
+    "meaning": "to stand; to rise; to stand up​",        
 
     "conjugations": {
 
@@ -634,6 +651,7 @@ var words = {
   "打つ": {
 
     "group": "godan",
+    "meaning": "to hit; to strike; to knock; to beat; to punch; to slap; to tap; to bang; to clap; to pound",        
 
     "conjugations": {
 
@@ -671,6 +689,7 @@ var words = {
   "待つ": {
 
     "group": "godan",
+    "meaning": "to wait​; to await; to look forward to; to anticipate​",        
 
     "conjugations": {
 
@@ -708,6 +727,7 @@ var words = {
   "持つ": {
 
     "group": "godan",
+    "meaning": "to hold (in one's hand); to take; to carry​; to possess; to have; to own​",        
 
     "conjugations": {
 
@@ -745,6 +765,7 @@ var words = {
   "行く": {
 
     "group": "iku",
+    "meaning": "to go",        
 
     "conjugations": {
 
@@ -782,6 +803,7 @@ var words = {
   "飲む": {
 
     "group": "godan",
+    "meaning": "to drink; to gulp; to swallow; to take (medicine)",        
 
     "conjugations": {
 
@@ -819,6 +841,7 @@ var words = {
   "作る": {
 
     "group": "godan",
+    "meaning": "to make; to produce; to manufacture; to build; to construct​",        
 
     "conjugations": {
 
@@ -856,6 +879,7 @@ var words = {
   "買い戻す": {
 
     "group": "godan",
+    "meaning": "to buy back; to redeem​",        
 
     "conjugations": {
 
@@ -893,6 +917,7 @@ var words = {
   "見る": {
 
     "group": "ichidan",
+    "meaning": "to see; to look; to watch; to view; to observe​",        
 
     "conjugations": {
 
@@ -930,6 +955,7 @@ var words = {
   "食べる": {
 
     "group": "ichidan",
+    "meaning": "to eat​",        
 
     "conjugations": {
 
@@ -967,6 +993,7 @@ var words = {
   "起きる": {
 
     "group": "ichidan",
+    "meaning": "to get up; to rise; to wake up; to be awake; to stay awake​",        
 
     "conjugations": {
 
@@ -1004,6 +1031,7 @@ var words = {
   "買い換える": {
 
     "group": "ichidan",
+    "meaning": "o buy a replacement; to replace by buying something new​",        
 
     "conjugations": {
 
@@ -1041,6 +1069,7 @@ var words = {
   "来る": {
 
     "group": "kuru",
+    "meaning": "to come; to approach; to arrive​",        
 
     "conjugations": {
 
@@ -1078,6 +1107,7 @@ var words = {
   "する": {
 
     "group": "suru",
+    "meaning": "to do",        
 
     "conjugations": {
 
@@ -1107,6 +1137,7 @@ var words = {
   "勉強する": {
 
     "group": "suru",
+    "meaning": "to study",        
 
     "conjugations": {
 
@@ -1136,6 +1167,7 @@ var words = {
   "電話する": {
 
     "group": "suru",
+    "meaning": "to call on the phone",        
 
     "conjugations": {
 
@@ -1165,6 +1197,7 @@ var words = {
   "開発する": {
 
     "group": "suru",
+    "meaning": "to develop; to exploit",        
 
     "conjugations": {
 
@@ -1194,6 +1227,7 @@ var words = {
   "計算する": {
 
     "group": "suru",
+    "meaning": "to calculate; to count; to forecast",        
 
     "conjugations": {
 
@@ -1223,6 +1257,7 @@ var words = {
   "読む": {
 
     "group": "godan",
+    "meaning": "to read​; to guess; to predict; to read (someone's thoughts)",        
 
     "conjugations": {
 
@@ -1260,6 +1295,7 @@ var words = {
   "思う": {
 
     "group": "godan",
+    "meaning": "to think; to consider; to believe​",        
 
     "conjugations": {
 
@@ -1297,6 +1333,7 @@ var words = {
   "買い与える": {
 
     "group": "ichidan",
+    "meaning": "to buy as a gift​",        
 
     "conjugations": {
 
@@ -1334,6 +1371,7 @@ var words = {
   "座る": {
 
     "group": "godan",
+    "meaning": "to sit; to squat​",        
 
     "conjugations": {
 
@@ -1371,6 +1409,7 @@ var words = {
   "休む": {
 
     "group": "godan",
+    "meaning": "to be absent; to take a day off​; to rest; to have a break",        
 
     "conjugations": {
 
@@ -1408,6 +1447,7 @@ var words = {
   "足す": {
 
     "group": "godan",
+    "meaning": "to add",        
 
     "conjugations": {
 
@@ -1443,8 +1483,9 @@ var words = {
   },
 
   "歌う": {
-
+    
     "group": "godan",
+    "meaning": "to sing",        
 
     "conjugations": {
 
@@ -1482,6 +1523,7 @@ var words = {
   "高い": {
 
     "group": "i-adjective",
+    "meaning": "high; tall; expensive",        
 
     "conjugations": {
 
@@ -1499,6 +1541,7 @@ var words = {
   "面白い": {
 
     "group": "i-adjective",
+    "meaning": "interesting; amusing; funny; pleasant; fun",        
 
     "conjugations": {
 
@@ -1516,6 +1559,7 @@ var words = {
   "暗い": {
 
     "group": "i-adjective",
+    "meaning": "dark; gloomy​",        
 
     "conjugations": {
 
@@ -1533,6 +1577,7 @@ var words = {
   "いい": {
 
     "group": "ii",
+    "meaning": "good; excellent; OK",        
 
     "conjugations": {
 
@@ -1550,6 +1595,7 @@ var words = {
   "暖かい": {
 
     "group": "i-adjective",
+    "meaning": "warm; mild",        
 
     "conjugations": {
 
@@ -1567,6 +1613,7 @@ var words = {
   "華々しい": {
 
     "group": "i-adjective",
+    "meaning": "brilliant; magnificent; spectacular​",        
 
     "conjugations": {
 
@@ -1584,6 +1631,7 @@ var words = {
   "怖い": {
 
     "group": "i-adjective",
+    "meaning": "scary; frightening; eerie; dreadful​",        
 
     "conjugations": {
 
@@ -1601,6 +1649,7 @@ var words = {
   "硬い": {
 
     "group": "i-adjective",
+    "meaning": "hard; solid; tough​",        
 
     "conjugations": {
 
@@ -1618,6 +1667,7 @@ var words = {
   "有名": {
 
     "group": "na-adjective",
+    "meaning": "famous",        
 
     "conjugations": {
 
@@ -1635,6 +1685,7 @@ var words = {
   "好き": {
 
     "group": "na-adjective",
+    "meaning": "liking; fondness; love",        
 
     "conjugations": {
 
@@ -1652,6 +1703,7 @@ var words = {
   "元気": {
 
     "group": "na-adjective",
+    "meaning": "lively; full of spirit; energetic; healthy; well;",        
 
     "conjugations": {
 
@@ -1669,6 +1721,7 @@ var words = {
   "意地悪": {
 
     "group": "na-adjective",
+    "meaning": "malicious; ill-tempered; unkind​",        
 
     "conjugations": {
 
@@ -1686,6 +1739,7 @@ var words = {
   "静": {
 
     "group": "na-adjective",
+    "meaning": "quiet; calm; still",        
 
     "conjugations": {
 
@@ -1703,6 +1757,7 @@ var words = {
   "便利": {
 
     "group": "na-adjective",
+    "meaning": "convenient; handy; useful​",        
 
     "conjugations": {
 
@@ -1720,6 +1775,7 @@ var words = {
   "上手": {
 
     "group": "na-adjective",
+    "meaning": "skill; skillful; dexterity",        
 
     "conjugations": {
 
@@ -1737,6 +1793,7 @@ var words = {
   "幸い": {
 
     "group": "na-adjective",
+    "meaning": "happiness; blessedness; luck; fortune",        
 
     "conjugations": {
 

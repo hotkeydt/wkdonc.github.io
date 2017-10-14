@@ -60,6 +60,17 @@ body, input {
   padding-bottom: 12px;
 }
 
+.meaningOuter {
+  background: #262626
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+  display: table;
+}
+
 #message {
   width: 100%;
 }

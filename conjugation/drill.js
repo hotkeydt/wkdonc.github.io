@@ -203,13 +203,15 @@ function getVerbForms(entry) {
   var result = {
     "kanji": {},
     "hiragana": {},
-    "furigana": {}
+    "furigana": {},
+    "meaning": {}
   };
 
   Object.keys(words[entry].conjugations).forEach(function (key) {
     result["kanji"][key] = kanjiForm(words[entry].conjugations[key]);
     result["hiragana"][key] = kanaForm(words[entry].conjugations[key]);
     result["furigana"][key] = words[entry].conjugations[key];
+    result["meaning"][key] = words[entry].meaning;
   });
 
   return result;
@@ -394,6 +396,7 @@ function generateQuestion() {
   var kanjiForms = forms["kanji"];
   var kanaForms = forms["hiragana"];
   var furiganaForms = forms["furigana"];
+  var meaningForms = forms["meaning"];
 
   var question = "What is the " + transformation.phrase + " form of " +
     wordWithFurigana(furiganaForms[from_form]).randomElement() + "?";
@@ -402,6 +405,8 @@ function generateQuestion() {
   var answer2 = kanaForms[to_form];
 
   $('#question').html(question);
+  $('#meaningLabel').html("Show meaning");
+  $('#meaning').html(meaningForms[from_form]);
 
   window.question = question;
   window.answer = kanjiForms[to_form];
@@ -412,11 +417,19 @@ function generateQuestion() {
   $('#response').html("");
   $('#message').html("");
 
+  $('#meaningLabel').show();
+  $('#meaning').hide();
+
   $('#proceed').hide();
   $('#input').show();
   $('#answer').focus();
 
   $('#answer').on('input', processAnswerKey);
+}
+
+function showMeaning() {
+  $('#meaningLabel').hide();
+  $('#meaning').show();
 }
 
 function processAnswer() {
@@ -446,7 +459,7 @@ function processAnswer() {
     $('#message').html("");
   } else {
     $('#message').html("<div>The correct answer was " + commaList(window.answerWithFurigana, "or") + "</div>");
-  }
+  } 
 
   $('#input').hide();
   $('#proceed').show();
