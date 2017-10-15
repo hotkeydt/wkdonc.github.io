@@ -1,7 +1,11 @@
 // drill.js
 
-var transformations = [
+var options = ["plain", "polite", "negative", "past", "te-form",
+  "progressive", "potential", "imperative", "passive", "causative",
+  "godan", "ichidan", "iku", "kuru", "suru", "i-adjective", "na-adjective",
+  "ii", "trick"];	
 
+var transformations = [
   { from: "negative", to: "dictionary" },
   { from: "past", to: "dictionary" },
   { from: "polite", to: "dictionary" },
@@ -669,23 +673,48 @@ function updateOptionSummary() {
 }
 
 function getOptions() {
-
-  var options = ["plain", "polite", "negative", "past", "te-form",
-    "progressive", "potential", "imperative", "passive", "causative",
-    "godan", "ichidan", "iku", "kuru", "suru", "i-adjective", "na-adjective",
-    "ii", "trick"];
-
   var result = {};
 
   options.forEach(function (option) {
     result[option] = $('#' + option).is(':checked') != false;
   });
 
+	localStorage.jdrillSelectedOptions = JSON.stringify(result);
+
   return result;
 }
 
-$('window').ready(function () {
+function setOption(option, checked) {
+	$('#' + option).prop('checked', checked);
+}
 
+function setOptions() {
+		var storedOptions = JSON.parse(localStorage.getItem("jdrillSelectedOptions"));
+	
+		if (storedOptions) {	
+		  options.forEach(function (option) {
+		  	if (storedOptions[option]) {
+		  		setOption(option, storedOptions[option]);
+		  	}
+	  	});
+	  }
+	  else {
+	  	// Initial state
+			setOption("plain", true);
+			setOption("polite", true);
+			setOption("negative", true);
+			setOption("past", true);
+			setOption("godan", true);
+			setOption("ichidan", true);
+			setOption("iku", true);
+			setOption("kuru", true);
+			setOption("suru", true);
+	  }
+}
+
+$('window').ready(function () {
+	setOptions();
+	
   calculateTransitions();
 
   $('#go').click(startQuiz);
@@ -693,7 +722,7 @@ $('window').ready(function () {
 
   $('div.options input').click(updateOptionSummary);
   $('input#trick').click(updateOptionSummary);
-
+	
   updateOptionSummary();
 
   showSplash();
