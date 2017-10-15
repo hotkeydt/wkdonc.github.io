@@ -436,14 +436,15 @@ function showMeaning() {
 }
 
 function proceed() {
+  // Reset controls
+  $('#answer').prop('disabled', false);
+  $('#answer').prop('class', "");
+  $('#answer').val("");     
+  $('#conjugations').empty()
+
   if (log.history.length == $('#numQuestions').val()) {
     endQuiz();
   } else {
-    // Reset controls
-    $('#answer').prop('disabled', false);
-    $('#answer').prop('class', "");
-    $('#answer').val("");     
-    $('#conjugations').empty()
        
     generateQuestion();
   } 
