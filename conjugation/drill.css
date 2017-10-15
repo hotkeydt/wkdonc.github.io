@@ -11,9 +11,8 @@ fieldset {
   padding: 0;
 }
 
-.questionOuter {
+.questionOuter, .from_form {
   background: #a0c0a0;
-  width: 100%;
 }
 
 #question {
@@ -88,7 +87,7 @@ fieldset {
   text-align: center;
 }
 
-.correct {
+.correct, .to_form {
   background: #8f8 !important;
 }
 
@@ -208,4 +207,27 @@ i {
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+table.conjugation {
+  border-collapse: collapse;
+  width:100%;
+}
+
+table.conjugation td {
+  padding: 8px;
+  font-size: 14px;
+  color: gray;
+  border: 1px solid gray;
+  text-align: center;
+  width: 40%;
+}
+
+table.conjugation td:first-child {
+  color: black;
+  width: 20%;
+}
+
+table.conjugation .from_form, table.conjugation .to_form {
+  color: black;
 }

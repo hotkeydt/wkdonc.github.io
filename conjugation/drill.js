@@ -416,6 +416,9 @@ function generateQuestion() {
   window.answer = kanjiForms[to_form];
   window.answerWithFurigana = wordWithFurigana(furiganaForms[to_form]);
   window.answer2 = answer2;
+  window.entry = entry;
+  window.from_form = transformation.from;
+  window.to_form = transformation.to
 
   $('#message').html("");
 
@@ -440,7 +443,8 @@ function proceed() {
     $('#answer').prop('disabled', false);
     $('#answer').prop('class', "");
     $('#answer').val("");     
-    
+    $('#conjugations').empty()
+       
     generateQuestion();
   } 
 }
@@ -483,6 +487,77 @@ function correctAnswer() {
   } 
 
   updateHistoryView(log);
+  
+  showConjugations()
+}
+
+function showConjugations()
+{
+  var review = $('<table class="conjugation">');
+
+  var total = 0;
+  var correct = 0;
+
+  var header_tr = $('<tr>');
+    
+  header_tr.append($('<th>Form</th>'));
+  header_tr.append($('<th>Positive</th>'));
+  header_tr.append($('<th>Negative</th>'));
+
+  review.append(header_tr);
+
+  var conjugations = words[entry].conjugations;
+
+  Object.keys(conjugations).forEach(function (key) {
+    if (!key.endsWith("negative")) {
+            
+      var negativeKey = key + " negative";
+      if (key == "dictionary") {
+        negativeKey = "negative";
+      }
+      
+      var tr = $('<tr>');
+  
+      var td1 = $('<td>');
+      var td2 = $('<td>');
+      var td3 = $('<td>');
+  
+      if (window.to_form == key)
+      {
+        td2 = $('<td class="to_form">');
+      }
+      
+      if (window.from_form == key)
+      {
+        td2 = $('<td class="from_form">');
+      }
+
+      if (window.to_form == negativeKey)
+      {
+        td3 = $('<td class="to_form">');
+      }
+      
+      if (window.from_form == negativeKey)
+      {
+        td3 = $('<td class="from_form">');
+      }   
+  
+      td1.html(key);
+      td2.html(wordWithFurigana(conjugations[key]));
+      
+      if (conjugations.hasOwnProperty(negativeKey)) {
+        td3.html(wordWithFurigana(conjugations[negativeKey]));
+      }
+  
+      tr.append(td1);
+      tr.append(td2);
+      tr.append(td3);
+  
+      review.append(tr);
+    }
+  });
+
+  $('#conjugations').empty().append(review);
 }
 
 function updateHistoryView(log) {
@@ -717,7 +792,16 @@ function setOptions() {
     }
 }
 
+function buildConjugations() {
+//  Object.keys(words).forEach(function (word) {
+//    Ichidan.conjugate(word);
+//  });
+}
+
 $('window').ready(function () {
+  
+  buildConjugations();
+  
   setOptions();
   
   calculateTransitions();
