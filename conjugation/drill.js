@@ -3,7 +3,7 @@
 var options = ["plain", "polite", "negative", "past", "te-form",
   "progressive", "potential", "imperative", "passive", "causative",
   "godan", "ichidan", "iku", "kuru", "suru", "i-adjective", "na-adjective",
-  "ii", "trick"];	
+  "ii", "trick"]; 
 
 var transformations = [
   { from: "negative", to: "dictionary" },
@@ -417,15 +417,11 @@ function generateQuestion() {
   window.answerWithFurigana = wordWithFurigana(furiganaForms[to_form]);
   window.answer2 = answer2;
 
-  $('#next').prop('disabled', true);
-  $('#response').html("");
   $('#message').html("");
 
   $('#meaningLabel').show();
   $('#meaning').hide();
 
-  $('#proceed').hide();
-  $('#input').show();
   $('#answer').focus();
 
   $('#answer').on('input', processAnswerKey);
@@ -436,8 +432,29 @@ function showMeaning() {
   $('#meaning').show();
 }
 
-function processAnswer() {
+function proceed() {
+  if (log.history.length == $('#numQuestions').val()) {
+    endQuiz();
+  } else {
+    // Reset controls
+    $('#answer').prop('disabled', false);
+    $('#answer').prop('class', "");
+    $('#answer').val("");     
+    
+    generateQuestion();
+  } 
+}
 
+function processAnswer() {
+  if ($('#answer').prop('disabled')) {    
+    proceed()
+  }
+  else { 
+    correctAnswer();
+  }
+}
+  
+function correctAnswer() {
   var response = $('#answer').val().trim();
 
   if (response == "")
@@ -455,19 +472,15 @@ function processAnswer() {
     "correct": correct
   });
 
-  $('#answer').val("");
-  $('#response').prop('class', klass).text(response);
-  $('#next').prop('disabled', false);
+  $('#answer').prop('class', klass);
+  $('#answer').prop('disabled', true);
+  $('#proceedButton').focus();
 
   if (correct) {
     $('#message').html("");
   } else {
     $('#message').html("<div>The correct answer was " + commaList(window.answerWithFurigana, "or") + "</div>");
   } 
-
-  $('#input').hide();
-  $('#proceed').show();
-  $('#proceed button').focus();
 
   updateHistoryView(log);
 }
@@ -520,14 +533,6 @@ function updateHistoryView(log) {
   $('#history').empty().append(review);
 
   $('#history').append("<p>" + correct + " of " + total + " correct.</p>");
-}
-
-function proceed() {
-  if (log.history.length == $('#numQuestions').val()) {
-    endQuiz();
-  } else {
-    generateQuestion();
-  }
 }
 
 function showSplash() {
@@ -679,42 +684,42 @@ function getOptions() {
     result[option] = $('#' + option).is(':checked') != false;
   });
 
-	localStorage.jdrillSelectedOptions = JSON.stringify(result);
+  localStorage.jdrillSelectedOptions = JSON.stringify(result);
 
   return result;
 }
 
 function setOption(option, checked) {
-	$('#' + option).prop('checked', checked);
+  $('#' + option).prop('checked', checked);
 }
 
 function setOptions() {
-		var storedOptions = JSON.parse(localStorage.getItem("jdrillSelectedOptions"));
-	
-		if (storedOptions) {	
-		  options.forEach(function (option) {
-		  	if (storedOptions[option]) {
-		  		setOption(option, storedOptions[option]);
-		  	}
-	  	});
-	  }
-	  else {
-	  	// Initial state
-			setOption("plain", true);
-			setOption("polite", true);
-			setOption("negative", true);
-			setOption("past", true);
-			setOption("godan", true);
-			setOption("ichidan", true);
-			setOption("iku", true);
-			setOption("kuru", true);
-			setOption("suru", true);
-	  }
+    var storedOptions = JSON.parse(localStorage.getItem("jdrillSelectedOptions"));
+  
+    if (storedOptions) {  
+      options.forEach(function (option) {
+        if (storedOptions[option]) {
+          setOption(option, storedOptions[option]);
+        }
+      });
+    }
+    else {
+      // Initial state
+      setOption("plain", true);
+      setOption("polite", true);
+      setOption("negative", true);
+      setOption("past", true);
+      setOption("godan", true);
+      setOption("ichidan", true);
+      setOption("iku", true);
+      setOption("kuru", true);
+      setOption("suru", true);
+    }
 }
 
 $('window').ready(function () {
-	setOptions();
-	
+  setOptions();
+  
   calculateTransitions();
 
   $('#go').click(startQuiz);
@@ -722,7 +727,7 @@ $('window').ready(function () {
 
   $('div.options input').click(updateOptionSummary);
   $('input#trick').click(updateOptionSummary);
-	
+  
   updateOptionSummary();
 
   showSplash();
