@@ -793,9 +793,12 @@ function setOptions() {
 }
 
 function buildConjugations() {
-//  Object.keys(words).forEach(function (word) {
-//    Ichidan.conjugate(word);
-//  });
+  Object.keys(words).forEach(function (word) {
+  	if (words[word].group == "ichidan")
+  	{
+   	 Ichidan.conjugate(words[word]);
+  	}
+  });
 }
 
 $('window').ready(function () {
