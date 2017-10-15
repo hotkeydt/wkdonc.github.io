@@ -34,7 +34,17 @@ var Ichidan = {
   },
   
   buildConjugation: function buildConjugation(stem, form) {
-    return stem + Ichidan.conjugations[form];
+  	var suffix = Ichidan.conjugations[form];
+    if (jQuery.isArray(suffix)) {
+      var out = [];
+      suffix.forEach(function(item){
+        out.push(stem + item)
+      });
+      return out;
+    }
+    else {    
+      return stem + suffix;
+    }
   },
   
   conjugate: function conjugate(word) {
@@ -47,7 +57,7 @@ var Ichidan = {
       word["conjugations"] = {};
     }
 
-		// Only fill-in missing forms   
+    // Only fill-in missing forms   
     Object.keys(Ichidan.conjugations).forEach(function (form) {   
       if (!word.conjugations.hasOwnProperty(form)) {
         word.conjugations[form] = Ichidan.buildConjugation(word.stem, form);        

@@ -547,7 +547,7 @@ function showConjugations()
       td2.html(wordWithFurigana(conjugations[key]));
       
       if (conjugations.hasOwnProperty(negativeKey)) {
-        td3.html(wordWithFurigana(conjugations[negativeKey]));
+        td3.html(commaList(wordWithFurigana(conjugations[negativeKey]), "or"));
       }
   
       tr.append(td1);
@@ -798,6 +798,9 @@ function buildConjugations() {
   	if (words[word].group == "ichidan")
   	{
    	 Ichidan.conjugate(words[word]);
+  	} 
+  	else if (words[word].group == "godan") {
+  		Godan.conjugate(words[word]);
   	}
   });
 }
