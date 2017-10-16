@@ -332,14 +332,6 @@ var Godan = {
       if (!word.conjugations.hasOwnProperty(form)) {
         word.conjugations[form] = Godan.buildConjugation(subGroup, word.stem, form);        
       }
-      else {
-        //toString for arrays
-        var orig = word.conjugations[form].toString();
-        var auto = Godan.buildConjugation(subGroup, word.stem, form).toString();
-        if (orig != auto) {
-          console.log("found mismatch: " + auto + " should be " + orig);
-        } 
-      }      
     }); 
   },  
 }

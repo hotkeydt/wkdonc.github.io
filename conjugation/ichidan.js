@@ -2,7 +2,7 @@
 
 var Ichidan = {
   
-    conjugations : {
+  conjugations : {
     "dictionary": "る",
     "negative": "ない",
     "polite": "ます",
@@ -34,7 +34,7 @@ var Ichidan = {
   },
   
   buildConjugation: function buildConjugation(stem, form) {
-  	var suffix = Ichidan.conjugations[form];
+    var suffix = Ichidan.conjugations[form];
     if (jQuery.isArray(suffix)) {
       var out = [];
       suffix.forEach(function(item){
