@@ -794,14 +794,18 @@ function setOptions() {
 }
 
 function buildConjugations() {
-  Object.keys(words).forEach(function (word) {
-  	if (words[word].group == "ichidan")
-  	{
-   	 Ichidan.conjugate(words[word]);
-  	} 
-  	else if (words[word].group == "godan") {
-  		Godan.conjugate(words[word]);
-  	}
+  Object.keys(words).forEach(function (word) {  
+    switch(words[word].group) {
+      case "ichidan":
+        Ichidan.conjugate(words[word]);
+        break;
+      case "godan":
+        Godan.conjugate(words[word]);
+        break;
+      case "suru":
+        Suru.conjugate(words[word]);      
+        break;    
+    }
   });
 }
 

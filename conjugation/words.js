@@ -429,213 +429,45 @@ var words = { 　
   //
 
   "する": {
-
     "group": "suru",
+    "stem": "",
     "meaning": "to do",        
-
-    "conjugations": {
-
-      "dictionary": "する",
-      "negative": "しない",
-      "polite": "します",
-      "polite negative": "しません",
-      "past": "した",
-      "past negative": "しなかった",
-      "polite past": "しました",
-      "polite past negative": "しませんでした",
-      "te-form": "して",
-      "te-form negative": ["しなくて", "しないで"],
-      "imperative": "しろ",
-      "imperative negative": "さるな",
-      "progressive": "している",
-      "progressive negative": "していない",
-      "polite progressive": "しています",
-      "polite progressive negative": "していません",
-      "progressive past": "していた",
-      "progressive past negative": "していなかった",
-      "polite progressive past": "していました",
-      "polite progressive past negative": "していませんでした",
-    },
   },
 
   "勉強する": {
-
     "group": "suru",
+    "stem": "勉[べん]強[きょう]",        
     "meaning": "to study",        
-
-    "conjugations": {
-
-      "dictionary": "勉[べん]強[きょう]する",
-      "negative": "勉[べん]強[きょう]しない",
-      "polite": "勉[べん]強[きょう]します",
-      "polite negative": "勉[べん]強[きょう]しません",
-      "past": "勉[べん]強[きょう]した",
-      "past negative": "勉[べん]強[きょう]しなかった",
-      "polite past": "勉[べん]強[きょう]しました",
-      "polite past negative": "勉[べん]強[きょう]しませんでした",
-      "te-form": "勉[べん]強[きょう]して",
-      "te-form negative": ["勉[べん]強[きょう]しなくて", "勉[べん]強[きょう]しないで"],
-      "imperative": "勉[べん]強[きょう]しろ",
-      "imperative negative": "勉[べん]強[きょう]さるな",
-      "progressive": "勉[べん]強[きょう]している",
-      "progressive negative": "勉[べん]強[きょう]していない",
-      "polite progressive": "勉[べん]強[きょう]しています",
-      "polite progressive negative": "勉[べん]強[きょう]していません",
-      "progressive past": "勉[べん]強[きょう]していた",
-      "progressive past negative": "勉[べん]強[きょう]していなかった",
-      "polite progressive past": "勉[べん]強[きょう]していました",
-      "polite progressive past negative": "勉[べん]強[きょう]していませんでした",
-    },
   },
   
   "電話する": {
-
     "group": "suru",
+    "stem": "電[でん]話[わ]",            
     "meaning": "to call on the phone",        
-
-    "conjugations": {
-
-      "dictionary": "電[でん]話[わ]する",
-      "negative": "電[でん]話[わ]しない",
-      "polite": "電[でん]話[わ]します",
-      "polite negative": "電[でん]話[わ]しません",
-      "past": "電[でん]話[わ]した",
-      "past negative": "電[でん]話[わ]しなかった",
-      "polite past": "電[でん]話[わ]しました",
-      "polite past negative": "電[でん]話[わ]しませんでした",
-      "te-form": "電[でん]話[わ]して",
-      "te-form negative": ["電[でん]話[わ]しなくて", "電[でん]話[わ]しないで"],
-      "imperative": "電[でん]話[わ]しろ",
-      "imperative negative": "電[でん]話[わ]さるな",
-      "progressive": "電[でん]話[わ]している",
-      "progressive negative": "電[でん]話[わ]していない",
-      "polite progressive": "電[でん]話[わ]しています",
-      "polite progressive negative": "電[でん]話[わ]していません",
-      "progressive past": "電[でん]話[わ]していた",
-      "progressive past negative": "電[でん]話[わ]していなかった",
-      "polite progressive past": "電[でん]話[わ]していました",
-      "polite progressive past negative": "電[でん]話[わ]していませんでした",
-    },
   },
 
   "開発する": {
-
     "group": "suru",
+    "stem": "開[かい]発[はつ]",                
     "meaning": "to develop; to exploit",        
-
-    "conjugations": {
-
-      "dictionary": "開[かい]発[はつ]する",
-      "negative": "開[かい]発[はつ]しない",
-      "polite": "開[かい]発[はつ]します",
-      "polite negative": "開[かい]発[はつ]しません",
-      "past": "開[かい]発[はつ]した",
-      "past negative": "開[かい]発[はつ]しなかった",
-      "polite past": "開[かい]発[はつ]しました",
-      "polite past negative": "開[かい]発[はつ]しませんでした",
-      "te-form": "開[かい]発[はつ]して",
-      "te-form negative": ["開[かい]発[はつ]しなくて", "開[かい]発[はつ]しないで"],
-      "imperative": "開[かい]発[はつ]しろ",
-      "imperative negative": "開[かい]発[はつ]さるな",
-      "progressive": "開[かい]発[はつ]している",
-      "progressive negative": "開[かい]発[はつ]していない",
-      "polite progressive": "開[かい]発[はつ]しています",
-      "polite progressive negative": "開[かい]発[はつ]していません",
-      "progressive past": "開[かい]発[はつ]していた",
-      "progressive past negative": "開[かい]発[はつ]していなかった",
-      "polite progressive past": "開[かい]発[はつ]していました",
-      "polite progressive past negative": "開[かい]発[はつ]していませんでした",
-    },
   },
 
   "計算する": {
-
     "group": "suru",
+    "stem": "計[けい]算[さん]",
     "meaning": "to calculate; to count; to forecast",        
-
-    "conjugations": {
-
-      "dictionary": "計[けい]算[さん]する",
-      "negative": "計[けい]算[さん]しない",
-      "polite": "計[けい]算[さん]します",
-      "polite negative": "計[けい]算[さん]しません",
-      "past": "計[けい]算[さん]した",
-      "past negative": "計[けい]算[さん]しなかった",
-      "polite past": "計[けい]算[さん]しました",
-      "polite past negative": "計[けい]算[さん]しませんでした",
-      "te-form": "計[けい]算[さん]して",
-      "te-form negative": ["計[けい]算[さん]しなくて", "計[けい]算[さん]しないで"],
-      "imperative": "計[けい]算[さん]しろ",
-      "imperative negative": "計[けい]算[さん]さるな",
-      "progressive": "計[けい]算[さん]している",
-      "progressive negative": "計[けい]算[さん]していない",
-      "polite progressive": "計[けい]算[さん]しています",
-      "polite progressive negative": "計[けい]算[さん]していません",
-      "progressive past": "計[けい]算[さん]していた",
-      "progressive past negative": "計[けい]算[さん]していなかった",
-      "polite progressive past": "計[けい]算[さん]していました",
-      "polite progressive past negative": "計[けい]算[さん]していませんでした",
-    },
   },
 
   "仕事する": {
-
     "group": "suru",
+    "stem": "仕[し]事[ごと]",
     "meaning": "to work",        
-
-    "conjugations": {
-
-      "dictionary": "仕[し]事[ごと]する",
-      "negative": "仕[し]事[ごと]しない",
-      "polite": "仕[し]事[ごと]します",
-      "polite negative": "仕[し]事[ごと]しません",
-      "past": "仕[し]事[ごと]した",
-      "past negative": "仕[し]事[ごと]しなかった",
-      "polite past": "仕[し]事[ごと]しました",
-      "polite past negative": "仕[し]事[ごと]しませんでした",
-      "te-form": "仕[し]事[ごと]して",
-      "te-form negative": ["仕[し]事[ごと]しなくて", "仕[し]事[ごと]しないで"],
-      "imperative": "仕[し]事[ごと]しろ",
-      "imperative negative": "仕[し]事[ごと]さるな",
-      "progressive": "仕[し]事[ごと]している",
-      "progressive negative": "仕[し]事[ごと]していない",
-      "polite progressive": "仕[し]事[ごと]しています",
-      "polite progressive negative": "仕[し]事[ごと]していません",
-      "progressive past": "仕[し]事[ごと]していた",
-      "progressive past negative": "仕[し]事[ごと]していなかった",
-      "polite progressive past": "仕[し]事[ごと]していました",
-      "polite progressive past negative": "仕[し]事[ごと]していませんでした",
-    },
   },
 
   "注文する": {
-
     "group": "suru",
+    "stem": "注[ちゅう]文[もん]",
     "meaning": "to order; to request​",        
-
-    "conjugations": {
-
-      "dictionary": "注[ちゅう]文[もん]する",
-      "negative": "注[ちゅう]文[もん]しない",
-      "polite": "注[ちゅう]文[もん]します",
-      "polite negative": "注[ちゅう]文[もん]しません",
-      "past": "注[ちゅう]文[もん]した",
-      "past negative": "注[ちゅう]文[もん]しなかった",
-      "polite past": "注[ちゅう]文[もん]しました",
-      "polite past negative": "注[ちゅう]文[もん]しませんでした",
-      "te-form": "注[ちゅう]文[もん]して",
-      "te-form negative": ["注[ちゅう]文[もん]しなくて", "注[ちゅう]文[もん]しないで"],
-      "imperative": "注[ちゅう]文[もん]しろ",
-      "imperative negative": "注[ちゅう]文[もん]さるな",
-      "progressive": "注[ちゅう]文[もん]している",
-      "progressive negative": "注[ちゅう]文[もん]していない",
-      "polite progressive": "注[ちゅう]文[もん]しています",
-      "polite progressive negative": "注[ちゅう]文[もん]していません",
-      "progressive past": "注[ちゅう]文[もん]していた",
-      "progressive past negative": "注[ちゅう]文[もん]していなかった",
-      "polite progressive past": "注[ちゅう]文[もん]していました",
-      "polite progressive past negative": "注[ちゅう]文[もん]していませんでした",
-    },
   },
 
   // ***********************************
