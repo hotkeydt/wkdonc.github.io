@@ -3,7 +3,7 @@
 var options = ["plain", "polite", "negative", "past", "te-form",
   "progressive", "potential", "imperative", "passive", "causative",
   "godan", "ichidan", "iku", "kuru", "suru", "i-adjective", "na-adjective",
-  "ii", "trick"]; 
+  "trick"];
 
 var transformations = [
   { from: "negative", to: "dictionary" },
@@ -230,12 +230,12 @@ function wordWithFurigana(words) {
   return words.map(function (word) {
 
     var bits = word.split(/(.)\[([^\]]*)\]/);
-  
+
     while (bits.length > 1) {
       bits[0] = bits[0] + "<span tooltip='" + bits[2] + "'>" + bits[1] + "</span>" + bits[3];
       bits.splice(1, 3);
     }
-  
+
     return bits[0];
   });
 }
@@ -439,26 +439,26 @@ function proceed() {
   // Reset controls
   $('#answer').prop('disabled', false);
   $('#answer').prop('class', "");
-  $('#answer').val("");     
+  $('#answer').val("");
   $('#conjugations').empty()
 
   if (log.history.length == $('#numQuestions').val()) {
     endQuiz();
   } else {
-       
+
     generateQuestion();
-  } 
+  }
 }
 
 function processAnswer() {
-  if ($('#answer').prop('disabled')) {    
+  if ($('#answer').prop('disabled')) {
     proceed()
   }
-  else { 
+  else {
     correctAnswer();
   }
 }
-  
+
 function correctAnswer() {
   var response = $('#answer').val().trim();
 
@@ -485,10 +485,10 @@ function correctAnswer() {
     $('#message').html("");
   } else {
     $('#message').html("<div>The correct answer was " + commaList(window.answerWithFurigana, "or") + "</div>");
-  } 
+  }
 
   updateHistoryView(log);
-  
+
   showConjugations()
 }
 
@@ -500,7 +500,7 @@ function showConjugations()
   var correct = 0;
 
   var header_tr = $('<tr>');
-    
+
   header_tr.append($('<th>Form</th>'));
   header_tr.append($('<th>Positive</th>'));
   header_tr.append($('<th>Negative</th>'));
@@ -511,23 +511,23 @@ function showConjugations()
 
   Object.keys(conjugations).forEach(function (key) {
     if (!key.endsWith("negative")) {
-            
+
       var negativeKey = key + " negative";
       if (key == "dictionary") {
         negativeKey = "negative";
       }
-      
+
       var tr = $('<tr>');
-  
+
       var td1 = $('<td>');
       var td2 = $('<td>');
       var td3 = $('<td>');
-  
+
       if (window.to_form == key)
       {
         td2 = $('<td class="to_form">');
       }
-      
+
       if (window.from_form == key)
       {
         td2 = $('<td class="from_form">');
@@ -537,23 +537,23 @@ function showConjugations()
       {
         td3 = $('<td class="to_form">');
       }
-      
+
       if (window.from_form == negativeKey)
       {
         td3 = $('<td class="from_form">');
-      }   
-  
+      }
+
       td1.html(key);
       td2.html(wordWithFurigana(conjugations[key]));
-      
+
       if (conjugations.hasOwnProperty(negativeKey)) {
         td3.html(commaList(wordWithFurigana(conjugations[negativeKey]), "or"));
       }
-  
+
       tr.append(td1);
       tr.append(td2);
       tr.append(td3);
-  
+
       review.append(tr);
     }
   });
@@ -771,8 +771,8 @@ function setOption(option, checked) {
 
 function setOptions() {
     var storedOptions = JSON.parse(localStorage.getItem("jdrillSelectedOptions"));
-  
-    if (storedOptions) {  
+
+    if (storedOptions) {
       options.forEach(function (option) {
         if (storedOptions[option]) {
           setOption(option, storedOptions[option]);
@@ -794,7 +794,7 @@ function setOptions() {
 }
 
 function buildConjugations() {
-  Object.keys(words).forEach(function (word) {  
+  Object.keys(words).forEach(function (word) {
     switch(words[word].group) {
       case "ichidan":
         Ichidan.conjugate(words[word]);
@@ -803,18 +803,23 @@ function buildConjugations() {
         Godan.conjugate(words[word]);
         break;
       case "suru":
-        Suru.conjugate(words[word]);      
-        break;    
+        Suru.conjugate(words[word]);
+        break;
+      case "i-adjective":
+      case "na-adjective":
+        Adjectives.conjugate(words[word]);
+        break;
+
     }
   });
 }
 
 $('window').ready(function () {
-  
+
   buildConjugations();
-  
+
   setOptions();
-  
+
   calculateTransitions();
 
   $('#go').click(startQuiz);
@@ -822,7 +827,7 @@ $('window').ready(function () {
 
   $('div.options input').click(updateOptionSummary);
   $('input#trick').click(updateOptionSummary);
-  
+
   updateOptionSummary();
 
   showSplash();
