@@ -1,7 +1,7 @@
 // ichidan.js
 
 var Ichidan = {
-  
+
   conjugations : {
     "dictionary": "る",
     "negative": "ない",
@@ -30,9 +30,9 @@ var Ichidan = {
     "progressive past": "ていた",
     "progressive past negative": "ていなかった",
     "polite progressive past": "ていました",
-    "polite progressive past negative": "ていませんでした" 
+    "polite progressive past negative": "ていませんでした"
   },
-  
+
   buildConjugation: function buildConjugation(stem, form) {
     var suffix = Ichidan.conjugations[form];
     if (jQuery.isArray(suffix)) {
@@ -42,27 +42,29 @@ var Ichidan = {
       });
       return out;
     }
-    else {    
+    else {
       return stem + suffix;
     }
   },
-  
-  conjugate: function conjugate(word) {
-    if (!word.stem || word.group != "ichidan") {
-      console.log("stem not found or wrong group, nothing to do");
+
+  conjugate: function conjugate(word, wordInfo) {
+    if (word[word.length - 1] != 'る') {
+      console.log("expected verb ending る: " + word);
       return;
     }
 
-    if (!word.hasOwnProperty("conjugations")) {
-      word["conjugations"] = {};
+    if (!wordInfo.hasOwnProperty("conjugations")) {
+      wordInfo["conjugations"] = {};
     }
 
-    // Only fill-in missing forms   
-    Object.keys(Ichidan.conjugations).forEach(function (form) {   
-      if (!word.conjugations.hasOwnProperty(form)) {
-        word.conjugations[form] = Ichidan.buildConjugation(word.stem, form);        
+    var stem = word.slice(0, -1)
+
+    // Only fill-in missing forms
+    Object.keys(Ichidan.conjugations).forEach(function (form) {
+      if (!wordInfo.conjugations.hasOwnProperty(form)) {
+        wordInfo.conjugations[form] = Ichidan.buildConjugation(stem, form);
       }
-    }); 
-  },  
+    });
+  },
 }
 

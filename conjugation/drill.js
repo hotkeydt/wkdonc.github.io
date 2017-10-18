@@ -797,17 +797,17 @@ function buildConjugations() {
   Object.keys(words).forEach(function (word) {
     switch(words[word].group) {
       case "ichidan":
-        Ichidan.conjugate(words[word]);
+        Ichidan.conjugate(word, words[word]);
         break;
       case "godan":
-        Godan.conjugate(words[word]);
+        Godan.conjugate(word, words[word]);
         break;
       case "suru":
-        Suru.conjugate(words[word]);
+        Suru.conjugate(word, words[word]);
         break;
       case "i-adjective":
       case "na-adjective":
-        Adjectives.conjugate(words[word]);
+        Adjectives.conjugate(word, words[word]);
         break;
 
     }

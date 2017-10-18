@@ -1,7 +1,7 @@
 // godan.js
 
 var Godan = {
-  
+
     conjugations : {
       "う": {
         "dictionary": "う",
@@ -95,7 +95,7 @@ var Godan = {
         "polite progressive past": "っていました",
         "polite progressive past negative": "っていませんでした",
       },
-      
+
   // ***********************************
   //  Section: godan verbs in bu/mu/nu
   // ***********************************
@@ -192,7 +192,7 @@ var Godan = {
       "polite progressive past": "んでいました",
       "polite progressive past negative": "んでいませんでした",
     },
-      
+
   // ***********************************
   //  Section: godan verbs in ku/gu/su
   // ***********************************
@@ -227,8 +227,8 @@ var Godan = {
       "polite progressive past": "いていました",
       "polite progressive past negative": "いていませんでした",
     },
-      
-      
+
+
     "ぐ": {
       "dictionary": "ぐ",
       "negative": "がない",
@@ -257,9 +257,9 @@ var Godan = {
       "progressive past": "いでいた",
       "progressive past negative": "いでいなかった",
       "polite progressive past": "いでいました",
-      "polite progressive past negative": "いでいませんでした",      
+      "polite progressive past negative": "いでいませんでした",
     },
-    
+
     "す": {
       "dictionary": "す",
       "negative": "さない",
@@ -291,48 +291,42 @@ var Godan = {
       "polite progressive past negative": "していませんでした",
     }
   },
-  
+
   buildConjugation: function buildConjugation(subGroup, stem, form) {
-    var truncStem = stem.slice(0, -1)
     var suffix = subGroup[form]
     if (jQuery.isArray(suffix)) {
       var out = [];
       suffix.forEach(function(item){
-        out.push(truncStem + item)
+        out.push(stem + item)
       });
       return out;
     }
-    else {    
-      return truncStem + suffix;
+    else {
+      return stem + suffix;
     }
   },
-  
-  conjugate: function conjugate(word) {
-    if (!word.stem || word.group != "godan") {
-      console.log("stem not found or wrong group, nothing to do");
+
+  conjugate: function conjugate(word, wordInfo) {
+    var lastChar = word[word.length - 1];
+
+    if (!Godan.conjugations.hasOwnProperty(lastChar)) {
+      console.log("subgroup for " + word + " not found, skipping");
       return;
     }
 
-    // Only fill-in missing forms   
-    
-    var lastChar = word.stem[word.stem.length - 1];
-    
-    if (!Godan.conjugations.hasOwnProperty(lastChar)) {
-      console.log("subgroup for " + word.stem + " not found, skipping");
-      return;
-    }
-    
-    if (!word.hasOwnProperty("conjugations")) {
-      word["conjugations"] = {};
+    if (!wordInfo.hasOwnProperty("conjugations")) {
+      wordInfo["conjugations"] = {};
     }
 
     var subGroup = Godan.conjugations[lastChar];
-    
-    Object.keys(subGroup).forEach(function (form) {   
-      if (!word.conjugations.hasOwnProperty(form)) {
-        word.conjugations[form] = Godan.buildConjugation(subGroup, word.stem, form);        
+    var stem = word.slice(0, -1)
+
+    // Only fill-in missing forms
+    Object.keys(subGroup).forEach(function (form) {
+      if (!wordInfo.conjugations.hasOwnProperty(form)) {
+        wordInfo.conjugations[form] = Godan.buildConjugation(subGroup, stem, form);
       }
-    }); 
-  },  
+    });
+  },
 }
 

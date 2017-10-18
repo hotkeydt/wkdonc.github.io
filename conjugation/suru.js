@@ -24,7 +24,7 @@ var Suru = {
     "polite progressive past": "していました",
     "polite progressive past negative": "していませんでした",
   },
-  
+
   buildConjugation: function buildConjugation(stem, form) {
     var suffix = Suru.conjugations[form];
     if (jQuery.isArray(suffix)) {
@@ -34,27 +34,29 @@ var Suru = {
       });
       return out;
     }
-    else {    
+    else {
       return stem + suffix;
     }
   },
-  
-  conjugate: function conjugate(word) {
-    if (!word.hasOwnProperty("stem") || word.group != "suru") {
-      console.log("stem not found or wrong group, nothing to do");
+
+  conjugate: function conjugate(word, wordInfo) {
+    if (!word.endsWith("する")) {
+      console.log("expected verb ending する: " + word);
       return;
     }
 
-    if (!word.hasOwnProperty("conjugations")) {
-      word["conjugations"] = {};
+    if (!wordInfo.hasOwnProperty("conjugations")) {
+      wordInfo["conjugations"] = {};
     }
 
-    // Only fill-in missing forms   
-    Object.keys(Suru.conjugations).forEach(function (form) {   
-      if (!word.conjugations.hasOwnProperty(form)) {
-        word.conjugations[form] = Suru.buildConjugation(word.stem, form);        
+    var stem = word.slice(0, -2)
+
+    // Only fill-in missing forms
+    Object.keys(Suru.conjugations).forEach(function (form) {
+      if (!wordInfo.conjugations.hasOwnProperty(form)) {
+        wordInfo.conjugations[form] = Suru.buildConjugation(stem, form);
       }
-    }); 
-  },  
+    });
+  },
 }
 

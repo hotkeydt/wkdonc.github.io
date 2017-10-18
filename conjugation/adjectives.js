@@ -40,22 +40,25 @@ var Adjectives = {
     }
   },
 
-  conjugate: function conjugate(word) {
-    if (!word.hasOwnProperty("stem") /*|| !word.group.endsWith("adjective")*/) {
-      console.log("stem not found or wrong group, nothing to do");
-      return;
+  conjugate: function conjugate(word, wordInfo) {
+
+    if (!wordInfo.hasOwnProperty("conjugations")) {
+      wordInfo["conjugations"] = {};
     }
 
-    if (!word.hasOwnProperty("conjugations")) {
-      word["conjugations"] = {};
-    }
+    var isIAdjective = wordInfo.group.startsWith("i");
 
-    var subGroup = Adjectives.conjugations[word.group.startsWith("i") ? "i" : "na"];
+    var subGroup = Adjectives.conjugations[isIAdjective ? "i" : "na"];
+
+    var stem = word;
+    if (isIAdjective) {
+      stem = word.slice(0, -1)
+    }
 
     // Only fill-in missing forms
     Object.keys(subGroup).forEach(function (form) {
-      if (!word.conjugations.hasOwnProperty(form)) {
-        word.conjugations[form] = Adjectives.buildConjugation(subGroup, word.stem, form);
+      if (!wordInfo.conjugations.hasOwnProperty(form)) {
+        wordInfo.conjugations[form] = Adjectives.buildConjugation(subGroup, stem, form);
       }
     });
   },

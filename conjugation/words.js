@@ -5,70 +5,130 @@ var words = { 　
   // Section: ichidan verbs (ru)
   //
 
-  "借りる": {
+  "用[もち]いる": {
     "group": "ichidan",
-    "stem": "借[か]り",
+    "meaning": "to use; to make use of; to utilize",
+    "tags": "common jlpt.3 wanikani.3"
+  },
+
+  "止[と]める": {
+    "group": "ichidan",
+    "meaning": "to stop (something); to turn off",
+    "tags": "common jlpt.4 wanikani.3"
+  },
+
+  "分[わ]ける": {
+    "group": "ichidan",
+    "meaning": "to separate; to divide (into); to split (into); to part;",
+    "tags": "common jlpt.3 wanikani.3"
+  },
+
+  "生[い]きる": {
+    "group": "ichidan",
+    "meaning": "to live; to exist​",
+    "tags": "common jlpt.4 wanikani.3"
+  },
+
+  "外[はず]る": {
+    "group": "ichidan",
+    "meaning": "to be disconnected; to get out of place; to be off;",
+    "tags": "common jlpt.2 wanikani.3"
+  },
+
+  "切[き]れる": {
+    "group": "ichidan",
+    "meaning": "to break; to snap; to be cut;",
+    "tags": "common jlpt.3 wanikani.3"
+  },
+
+  "立[た]てる": {
+    "group": "ichidan",
+    "meaning": "to stand up; to put up; to set up; to erect; to raise",
+    "tags": "common jlpt.4 wanikani.2"
+  },
+
+  "出[で]る": {
+    "group": "ichidan",
+    "meaning": "to leave; to exit; to go out; to come out",
+    "tags": "common jlpt.5 wanikani.2"
+  },
+
+  "入[い]れる": {
+    "group": "ichidan",
+    "meaning": "to insert; to put in; to let in; to bring in;",
+    "tags": "common jlpt.5 wanikani.1"
+  },
+
+  "借[か]りる": {
+    "group": "ichidan",
     "meaning": "to borrow; to rent",
+    "tags": "common jlpt.5 wanikani.18"
   },
 
-  "寝る": {
+  "寝[ね]る": {
     "group": "ichidan",
-    "stem": "寝[ね]",
     "meaning": "to lie down​; to go to bed; to sleep",
+    "tags": "common jlpt.5 wanikani.22"
   },
 
-  "上げる": {
+  "上[あ]げる": {
     "group": "ichidan",
-    "stem": "上[あ]げ",
     "meaning": "to raise; to elevate",
+    "tags": "common jlpt.5 wanikani.1"
   },
 
-  "着る": {
+  "下[さ]げる": {
     "group": "ichidan",
-    "stem": "着[き]",
+    "meaning": "to lower; to hang",
+    "tags": "common jlpt.4 wanikani.1"
+  },
+
+  "着[き]る": {
+    "group": "ichidan",
     "meaning": "to wear; to put on​",
+    "tags": "common jlpt.5 wanikani.12"
   },
 
-  "育てる": {
+  "育[そだ]る": {
     "group": "ichidan",
-    "stem": "育[そだ]て",
     "meaning": "to raise; to rear; to bring up​; to train; to teach; to educate​",
+    "tags": "common jlpt.4 wanikani.13"
   },
 
-  "褒める": {
+  "褒[ほ]める": {
     "group": "ichidan",
-    "stem": "褒[ほ]め",
     "meaning": "to praise; to admire; to speak well of someone​",
+    "tags": "common jlpt.4 wanikani.40"
   },
 
-  "見る": {
+  "見[み]る": {
     "group": "ichidan",
-    "stem": "見[み]",
     "meaning": "to see; to look; to watch; to view; to observe​",
+    "tags": "common jlpt.5 wanikani.4"
   },
 
-  "食べる": {
+  "食[た]べる": {
     "group": "ichidan",
-    "stem": "食[た]べ",
     "meaning": "to eat​",
+    "tags": "common jlpt.5 wanikani.6"
   },
 
-  "起きる": {
+  "起[お]きる": {
     "group": "ichidan",
-    "stem": "起[お]き",
     "meaning": "to get up; to rise; to wake up; to be awake; to stay awake​",
+    "tags": "common jlpt.5 wanikani.10"
   },
 
-  "買い換える": {
+  "買[か]い換[か]える": {
     "group": "ichidan",
-    "stem": "買[か]い換[か]え",
     "meaning": "to buy a replacement; to replace by buying something new​",
+    "tags": "jlpt.3 wanikani.36"
   },
 
-  "買い与える": {
+  "買[か]い与[あた]える": {
     "group": "ichidan",
-    "stem": "買[か]い与[あた]え",
     "meaning": "to buy as a gift​",
+    "tags": "jlpt.3 wanikani.25"
   },
 
   // ***********************************
@@ -79,120 +139,163 @@ var words = { 　
   // Section: godan verbs in u
   //
 
-  "洗う": {
+  "洗[あら]う": {
     "group": "godan",
-    "stem": "洗[あら]う",
     "meaning": "to wash",
+    "tags": "common jlpt.5 wanikani.18"
   },
 
-  "使う": {
+  "使[つか]う": {
     "group": "godan",
-    "stem": "使[つか]う",
     "meaning": "to use",
+    "tags": "common jlpt.5 wanikani.9"
   },
 
   "もらう": {
     "group": "godan",
-    "stem": "もらう",
     "meaning": "to receive; to take; to accept",
+    "tags": "common jlpt.3"
   },
 
-  "買う": {
+  "買[か]う": {
     "group": "godan",
-    "stem": "買[か]う",
     "meaning": "to buy",
+    "tags": "common jlpt.5 wanikani.8"
   },
 
-  "歌う": {
+  "歌[うた]う": {
     "group": "godan",
-    "stem": "歌[うた]う",
     "meaning": "to sing",
+    "tags": "common jlpt.5 wanikani.12"
   },
 
-  "思う": {
+  "思[おも]う": {
     "group": "godan",
-    "stem": "思[おも]う",
     "meaning": "to think; to consider; to believe​",
+    "tags": "common jlpt.4 wanikani.6"
   },
 
   //
   // Section: godan verbs in tsu
   //
 
-  "待つ": {
+  "待[ま]つ": {
     "group": "godan",
-    "stem": "待[ま]つ",
     "meaning": "to wait",
+    "tags": "common jlpt.5 wanikani.9"
   },
 
-  "立つ": {
+  "立[た]つ": {
     "group": "godan",
-    "stem": "立[た]つ",
     "meaning": "to stand; to rise; to stand up​",
+    "tags": "common jlpt.5 wanikani.2"
   },
 
-  "打つ": {
+  "打[う]つ": {
     "group": "godan",
-    "stem": "打[う]つ",
     "meaning": "to hit; to strike; to knock; to beat; to punch; to slap; to tap; to bang; to clap; to pound",
+    "tags": "common jlpt.4 wanikani.4"
   },
 
-  "待つ": {
+  "待[ま]つ": {
     "group": "godan",
-    "stem": "待[ま]つ",
     "meaning": "to wait​; to await; to look forward to; to anticipate​",
+    "tags": "common jlpt.5 wanikani.9"
   },
 
-  "持つ": {
+  "持[も]つ": {
     "group": "godan",
-    "stem": "持[も]つ",
     "meaning": "to hold (in one's hand); to take; to carry​; to possess; to have; to own​",
+    "tags": "common jlpt.5 wanikani.9"
   },
 
   //
   // Section: godan verbs in ru
   //
 
-  "走る": {
+  "分[わ]かる": {
     "group": "godan",
-    "stem": "走[はし]る",
+    "meaning": "to understand; to comprehend; to grasp;",
+    "tags": "common jlpt.5 wanikani.3"
+  },
+
+  "止[と]まる": {
+    "group": "godan",
+    "meaning": "to stop (moving); to come to a stop​",
+    "tags": "common jlpt.5 wanikani.3"
+  },
+
+  "太[ふと]る": {
+    "group": "godan",
+    "meaning": "to grow fat; to become fat; to gain weight​",
+    "tags": "common jlpt.4 wanikani.3"
+  },
+
+  "切[き]る": {
+    "group": "godan",
+    "meaning": "to cut",
+    "tags": "common jlpt.5 wanikani.3"
+  },
+
+  "走[はし]る": {
+    "group": "godan",
     "meaning": "to run​",
+    "tags": "common jlpt.5 wanikani.5"
   },
 
-  "上る": {
+  "入[はい]る": {
     "group": "godan",
-    "stem": "上[のぼ]る",
+    "meaning": "to enter; to go into​",
+    "tags": "common jlpt.5 wanikani.1"
+  },
+
+
+  "上[のぼ]る": {
+    "group": "godan",
     "meaning": "to ascend; to go up; to climb​",
+    "tags": "common jlpt.5 wanikani.1"
   },
 
-  "写真を撮る": {
+  "上[あ]がる": {
     "group": "godan",
-    "stem": "写[しゃ]真[しん]を撮[と]る",
+    "meaning": "to rise; to go up; to come up",
+    "tags": "common jlpt.4 wanikani.1"
+  },
+
+  "下[さが]る": {
+    "group": "godan",
+    "meaning": "to get lower​; to come down; to go down; to fall; to drop; to hang",
+    "tags": "common jlpt.4 wanikani.1"
+  },
+
+  "写[しゃ]真[しん]を撮[と]る": {
+    "group": "godan",
     "meaning": "to take a picture​",
+    "tags": "jlpt.5 wanikani.30"
   },
 
-  "触る": {
+  "触[さわ]る": {
     "group": "godan",
-    "stem": "触[さわ]る",
     "meaning": "to touch; to feel​",
+    "tags": "common jlpt.4 wanikani.24"
   },
 
-  "乗る": {
+  "乗[の]る": {
     "group": "godan",
-    "stem": "乗[の]る",
     "meaning": "to get on (train, plane, bus, ship, etc.);",
+    "tags": "common jlpt.5 wanikani.9"
   },
 
-  "作る": {
+  "作[つく]る": {
     "group": "godan",
-    "stem": "作[つく]る",
     "meaning": "to make; to produce; to manufacture; to build; to construct​",
+    "tags": "common jlpt.5 wanikani.5"
   },
 
-  "座る": {
+  "座[すわ]る": {
     "group": "godan",
-    "stem": "座[すわ]る",
     "meaning": "to sit; to squat​",
+    "tags": "common jlpt.5 wanikani.18"
   },
 
   // ***********************************
@@ -203,54 +306,60 @@ var words = { 　
   // Section: godan verbs in bu
   //
 
-  "遊ぶ": {
+  "遊[あそ]ぶ": {
     "group": "godan",
-    "stem": "遊[あそ]ぶ",
     "meaning": "to play; to enjoy oneself; to be idle; to do nothing",
+    "tags": "common jlpt.5 wanikani.30"
   },
 
-  "学ぶ": {
+  "学[まな]ぶ": {
     "group": "godan",
-    "stem": "学[まな]ぶ",
     "meaning": "to study (in depth); to learn; to take lessons in​",
+    "tags": "common jlpt.3 wanikani.5"
   },
 
-  "喜ぶ": {
+  "喜[よろこ]ぶ": {
     "group": "godan",
-    "stem": "喜[よろこ]ぶ",
     "meaning": "to be delighted; to be glad; to be pleased​; to congratulate​",
+    "tags": "common jlpt.4 wanikani.16"
   },
 
   //
   // Section: godan verbs in mu
   //
 
-  "飲む": {
+  "生[う]む": {
     "group": "godan",
-    "stem": "飲[の]む",
+    "meaning": "to give birth; to bear (child); to lay (eggs)​",
+    "tags": "common jlpt.1 wanikani.3"
+  },
+
+  "飲[の]む": {
+    "group": "godan",
     "meaning": "to drink; to gulp; to swallow; to take (medicine)",
+    "tags": "common jlpt.5 wanikani.10"
   },
 
-    "読む": {
+    "読[よ]む": {
     "group": "godan",
-    "stem": "読[よ]む",
     "meaning": "to read​; to guess; to predict; to read (someone's thoughts)",
+    "tags": "common jlpt.5 wanikani.10"
   },
 
-  "休む": {
+  "休[やす]む": {
     "group": "godan",
-    "stem": "休[やす]む",
     "meaning": "to be absent; to take a day off​; to rest; to have a break",
+    "tags": "common jlpt.5 wanikani.4"
   },
 
   //
   // Section: godan verbs in nu
   //
 
-  "死ぬ": {
+  "死[し]ぬ": {
     "group": "godan",
-    "stem": "死[し]ぬ",
     "meaning": "to die",
+    "tags": "common jlpt.5 wanikani.6"
   },
 
   // ***********************************
@@ -261,79 +370,97 @@ var words = { 　
   // Section: godan verbs in ku
   //
 
-  "泣く": {
+  "引[ひ]く": {
     "group": "godan",
-    "stem": "泣[な]く",
+    "meaning": "to pull",
+    "tags": "common jlpt.5 wanikani.3"
+  },
+
+
+  "泣[な]く": {
+    "group": "godan",
     "meaning": "to cry",
+    "tags": "common jlpt.4 wanikani.15"
   },
 
-  "聞く": {
-
+  "聞[き]く": {
     "group": "godan",
-    "stem": "聞[き]く",
     "meaning": "to hear",
+    "tags": "common jlpt.5 wanikani.10"
   },
 
-  "書く": {
+  "書[か]く": {
     "group": "godan",
-    "stem": "書[か]く",
     "meaning": "to write; to compose; to pen​",
+    "tags": "common jlpt.5 wanikani.16"
   },
 
   //
   // Section: godan verbs in gu
   //
 
-  "泳ぐ": {
+  "泳[およ]ぐ": {
     "group": "godan",
-    "stem": "泳[およ]ぐ",
     "meaning": "to swim​",
+    "tags": "common jlpt.5 wanikani.9"
   },
 
-  "注ぐ": {
+  "注[そそ]ぐ": {
     "group": "godan",
-    "stem": "注[そそ]ぐ",
     "meaning": "to pour (into)​",
+    "tags": "common jlpt.3"
   },
 
-  "急ぐ": {
+  "急[いそ]ぐ": {
     "group": "godan",
-    "stem": "急[いそ]ぐ",
     "meaning": "to hurry; to rush; to hasten; to make something happen sooner​",
+    "tags": "common jlpt.4 wanikani.16"
   },
 
   //
   // Section: godan verbs in su
   //
 
-  "直す": {
+  "出[だ]す": {
     "group": "godan",
-    "stem": "直[なお]す",
+    "meaning": "to take out; to get out​",
+    "tags": "common jlpt.5 wanikani.2"
+  },
+
+  "正[ただ]す": {
+    "group": "godan",
+    "meaning": "to correct",
+    "tags": "common wanikani.2"
+  },
+
+  "直[なお]す": {
+    "group": "godan",
     "meaning": "to fix; to correct; to repair",
+    "tags": "common jlpt.4 wanikani.6"
   },
 
-  "話す": {
+  "話[はな]す": {
     "group": "godan",
-    "stem": "話[はな]す",
     "meaning": "to talk",
+    "tags": "common jlpt.5 wanikani.8"
   },
 
-  "消す": {
+  "消[け]す": {
     "group": "godan",
-    "stem": "消[け]す",
     "meaning": "to erase; to delete; to turn off power​",
+    "tags": "common jlpt.5 wanikani.12"
   },
 
-  "買い戻す": {
+  "買[か]い戻[もど]す": {
     "group": "godan",
-    "stem": "買[か]い戻[もど]す",
     "meaning": "to buy back; to redeem​",
+    "tags": "jlpt.3 wanikani.37"
   },
 
-  "足す": {
+  "足[た]す": {
     "group": "godan",
-    "stem": "足[た]す",
     "meaning": "to add",
+    "tags": "common jlpt.4 wanikani.6"
   },
 
   // ***********************************
@@ -345,12 +472,11 @@ var words = { 　
   //
 
   "行く": {
-
     "group": "iku",
     "meaning": "to go",
+    "tags": "common jlpt.5 wanikani.5",
 
     "conjugations": {
-
       "dictionary": "行[い]く",
       "negative": "行[い]かない",
       "polite": "行[い]きます",
@@ -387,12 +513,11 @@ var words = { 　
   //
 
   "来る": {
-
     "group": "kuru",
     "meaning": "to come; to approach; to arrive​",
+    "tags": "common jlpt.5 wanikani.5",
 
     "conjugations": {
-
       "dictionary": "来[く]る",
       "negative": "来[こ]ない",
       "polite": "来[き]ます",
@@ -430,44 +555,44 @@ var words = { 　
 
   "する": {
     "group": "suru",
-    "stem": "",
     "meaning": "to do",
+    "tags": "common jlpt.5 wanikani.1"
   },
 
-  "勉強する": {
+  "勉[べん]強[きょう]する": {
     "group": "suru",
-    "stem": "勉[べん]強[きょう]",
     "meaning": "to study",
+    "tags": "common jlpt.5 wanikani.14"
   },
 
-  "電話する": {
+  "電[でん]話[わ]する": {
     "group": "suru",
-    "stem": "電[でん]話[わ]",
     "meaning": "to call on the phone",
+    "tags": "common jlpt.5 wanikani.14"
   },
 
-  "開発する": {
+  "開[かい]発[はつ]する": {
     "group": "suru",
-    "stem": "開[かい]発[はつ]",
     "meaning": "to develop; to exploit",
+    "tags": "common jlpt.1 wanikani.10"
   },
 
-  "計算する": {
+  "計[けい]算[さん]する": {
     "group": "suru",
-    "stem": "計[けい]算[さん]",
     "meaning": "to calculate; to count; to forecast",
+    "tags": "common jlpt.3 wanikani.15"
   },
 
-  "仕事する": {
+  "仕[し]事[ごと]する": {
     "group": "suru",
-    "stem": "仕[し]事[ごと]",
     "meaning": "to work",
+    "tags": "common jlpt.5 wanikani.11"
   },
 
-  "注文する": {
+  "注[ちゅう]文[もん]する": {
     "group": "suru",
-    "stem": "注[ちゅう]文[もん]",
     "meaning": "to order; to request​",
+    "tags": "common jlpt.3 wanikani.13"
   },
 
   // ***********************************
@@ -478,109 +603,152 @@ var words = { 　
   // Section: i-adjectives
   //
 
-  "いい": {
+  "良[よ]い": {
     "group": "i-adjective",
-    "stem": "良[よ]",
     "meaning": "good; excellent; OK",
+    "tags": "common jlpt.5 wanikani.11",
 
-		// Some exceptions
+    // Some exceptions
     "conjugations": {
       "dictionary": "いい",
       "polite": "いいです",
     },
   },
 
-  "高い": {
+  "広[ひろ]い": {
     "group": "i-adjective",
-    "stem": "高[たか]",
+    "meaning": "wide; spacious; vast",
+    "tags": "common jlpt.5 wanikani.3"
+  },
+
+  "太[ふと]い": {
+    "group": "i-adjective",
+    "meaning": "fat; thick​",
+    "tags": "common jlpt.5 wanikani.3"
+  },
+
+  "少[すく]ない": {
+    "group": "i-adjective",
+    "meaning": "few; a little;",
+    "tags": "common jlpt.5 wanikani.3"
+  },
+
+  "丸[まる]い": {
+    "group": "i-adjective",
+    "meaning": "round; circular; spherical",
+    "tags": "common jlpt.5 wanikani.2"
+  },
+
+  "円[まる]い": {
+    "group": "i-adjective",
+    "meaning": "round; circular; spherical",
+    "tags": "common jlpt.5 wanikani.2"
+  },
+
+  "正[ただ]しい": {
+    "group": "i-adjective",
+    "meaning": "right; correct​",
+    "tags": "common jlpt.4 wanikani.2"
+  },
+
+  "大[おお]きい": {
+    "group": "i-adjective",
+    "meaning": "big; large; great; loud​",
+    "tags": "common jlpt.5 wanikani.1"
+  },
+
+  "高[たか]い": {
+    "group": "i-adjective",
     "meaning": "high; tall; expensive",
+    "tags": "common jlpt.5 wanikani.7"
   },
 
-  "面白い": {
+  "面[おも]白[しろ]い": {
     "group": "i-adjective",
-    "stem": "面[おも]白[しろ]",
     "meaning": "interesting; amusing; funny; pleasant; fun",
+    "tags": "common jlpt.5 wanikani.16"
   },
 
-  "暗い": {
+  "暗[くら]い": {
     "group": "i-adjective",
-    "stem": "暗[くら]",
+    "stem": "",
     "meaning": "dark; gloomy​",
+    "tags": "common jlpt.5 wanikani.13"
   },
 
-  "暖かい": {
+  "暖[あたた]かい": {
     "group": "i-adjective",
-    "stem": "暖[あたた]か",
     "meaning": "warm; mild",
+    "tags": "common jlpt.5 wanikani.12"
   },
 
-  "華々しい": {
+  "華[はな]々[ばな]しい": {
     "group": "i-adjective",
-    "stem": "華[はな]々[ばな]し",
     "meaning": "brilliant; magnificent; spectacular​",
+    "tags": "common jlpt.1 wanikani.33"
   },
 
-  "怖い": {
+  "怖[こわ]い": {
     "group": "i-adjective",
-    "stem": "怖[こわ]",
     "meaning": "scary; frightening; eerie; dreadful​",
+    "tags": "common jlpt.4 wanikani.29"
   },
 
-  "硬い": {
+  "硬[かた]い": {
     "group": "i-adjective",
-    "stem": "硬[かた]",
     "meaning": "hard; solid; tough​",
+    "tags": "common jlpt.4 wanikani.14"
   },
 
   //
   // Section: na-adjectives
   //
 
-  "有名": {
+  "有[ゆう]名[めい]": {
     "group": "na-adjective",
-    "stem": "有[ゆう]名[めい]",
     "meaning": "famous",
+    "tags": "common jlpt.5 wanikani.6"
   },
 
-  "好き": {
+  "好[す]き": {
     "group": "na-adjective",
-    "stem": "好[す]き",
     "meaning": "liking; fondness; love",
+    "tags": "common jlpt.5 wanikani.11"
   },
 
-  "元気": {
+  "元[げん]気[き]": {
     "group": "na-adjective",
-    "stem": "元[げん]気[き]",
     "meaning": "lively; full of spirit; energetic; healthy; well;",
+    "tags": "common jlpt.5 wanikani.4"
   },
 
-  "意地悪": {
+  "意[い]地[じ]悪[わる]": {
     "group": "na-adjective",
-    "stem": "意[い]地[じ]悪[わる]",
     "meaning": "malicious; ill-tempered; unkind​",
+    "tags": "common jlpt.2 wanikani.14"
   },
 
-  "静": {
+  "静[しず]か": {
     "group": "na-adjective",
-    "stem": "静[しず]か",
     "meaning": "quiet; calm; still",
+    "tags": "common jlpt.5 wanikani.18"
   },
 
-  "便利": {
+  "便[べん]利[り]": {
     "group": "na-adjective",
-    "stem": "便[べん]利[り]",
     "meaning": "convenient; handy; useful​",
+    "tags": "common jlpt.5 wanikani.11"
   },
 
-  "上手": {
+  "上[じょう]手[ず]": {
     "group": "na-adjective",
-    "stem": "上[じょう]手[ず]",
     "meaning": "skill; skillful; dexterity",
+    "tags": "common jlpt.5 wanikani.2"
   },
 
-  "幸い": {
+  "幸[さいわ]い": {
     "group": "na-adjective",
-    "stem": "幸[さいわ]い",
     "meaning": "happiness; blessedness; luck; fortune",
+    "tags": "common jlpt.3 wanikani.18"
   },
 };
